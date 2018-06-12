@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>myuw-help-and-feedback demo</title>
+
+    <!-- Web components polyfills -->
+    <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    
+    <!-- Dependencies for material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Load myuw-app-bar for local testing purposes -->
+    <script src="https://unpkg.com/@myuw-web-components/myuw-app-bar@0.2.1"></script>
+
+    <!-- Load the bundled component -->
+    <script src="./dist/myuw-help-and-feedback.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Styles for demo purposes ONLY, not to ship with the component -->
+    <style>
+      body {
+        margin: 0;
+        background: #ccc;
+      }
+      div.demo__test-content {
+        min-height: 1000px;
+        padding: 18px 36px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start
+      }
+      div.demo__test-content .demo__grid-box {
+        font-family: 'Roboto';
+        height: 300px;
+        width: 300px;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
+        background: #555;
+        color: #fff;
+        font-size: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        margin: 18px;
+        border-radius: 5px;
+      }
+    </style>
+
+    <myuw-app-bar>
+      <myuw-help-and-feedback slot="myuw-help"></myuw-help-and-feedback>
+    </myuw-app-bar>
+    <div class="demo__container">
+      <div class="demo__test-content">
+        <div class="demo__grid-box">Box 1</div>
+        <div class="demo__grid-box">Box 2</div>
+        <div class="demo__grid-box">Box 3</div>
+        <div class="demo__grid-box">Box 4</div>
+        <div class="demo__grid-box">Box 5</div>
+        <div class="demo__grid-box">Box 6</div>
+      </div>
+    </div>
+  </body>
+</html>
